@@ -4,4 +4,12 @@ def fibo(n):
 
 n = input("insert a number: \n")
 print "Fibonacci of ", n ," is: "
-print fibo(n)
+
+ans = 1
+cur = 1
+prev = 1
+for i in range(2,n):
+	ans = cur + prev
+	prev = cur
+	cur = ans
+print ans
